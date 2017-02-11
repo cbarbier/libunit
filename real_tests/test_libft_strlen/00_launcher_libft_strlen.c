@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   00_launcher_libft_strlen.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbarbier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cbarbier <cbarbier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 18:55:48 by cbarbier          #+#    #+#             */
-/*   Updated: 2017/02/11 19:08:05 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/11 20:33:11 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft_test.h"
+#include "libft_test.h"
 
 int		ft_strlen_launcher(void)
 {

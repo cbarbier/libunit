@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft_test.h"
+#include "libft_test.h"
 
 int	tab_and_spaces(void)
 {

@@ -6,11 +6,11 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 19:16:22 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 19:41:27 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 19:54:07 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft_test.h"
+#include "libft_test.h"
 
 int	simple_null(void)
 {

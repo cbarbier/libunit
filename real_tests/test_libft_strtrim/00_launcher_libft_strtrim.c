@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher_libft_strsplit.c                       :+:      :+:    :+:   */
+/*   00_launcher_libft_strtrim.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbarbier <cbarbier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 19:33:37 by cbarbier          #+#    #+#             */
+/*   Created: 2017/02/11 19:54:59 by matirell          #+#    #+#             */
 /*   Updated: 2017/02/11 20:33:11 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-int		ft_strsplit_launcher(void)
+int	ft_strtrim_launcher(void)
 {
-	int		(*pt0)();
-	int		(*pt1)();
-	int		(*pt2)();
-	int		(*pt3)();
 	t_unit	*tests;
 
-	pt0 = no_split;
-	pt1 = two_words;
-	pt2 = many_split;
-	pt3 = nullstring;
 	tests = ft_memalloc(sizeof(t_unit));
 	if (tests)
 	{
 		tests->head = NULL;
 		tests->cur = NULL;
 		ft_putendl("\t\t{ ------------------------------- }");
-		ft_putendl("\t\t{ -     FT_STRSPLIT TESTER      - }");
+		ft_putendl("\t\t{ - 42 FRAMEWORK LIBUNIT TESTER - }");
 		ft_putendl("\t\t{ ------------------------------- }");
-		load_test(tests, " 1/4 [EASY] - no split\t", &pt0);
-		load_test(tests, " 2/4 [EASY] - two words\t", &pt1);
-		load_test(tests, " 3/4 [HARD] - many split ", &pt2);
-		load_test(tests, " 4/4 [HARD] - null string", &pt3);
+		load_test(tests, " 1/4 [EASY] - Empty string ?\t",\
+		strtrim_empty);
+		load_test(tests, " 2/4 [EASY] - Space and Tabs before \t",\
+		strtrim_space_before);
+		load_test(tests, " 3/4 [EASY] - Space and Tabs after \t ",\
+		strtrim_space_after);
+		load_test(tests, " 4/4 [EASY] - Space and Tabs before and after \t  ",\
+		strtrim_space_before_and_after);
 		tests->returnval = ft_execute_tests(tests);
 		ft_display_resume(tests, 1);
 		return (tests->returnval);

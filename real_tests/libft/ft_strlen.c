@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_null_string.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbarbier <cbarbier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 20:04:53 by cbarbier          #+#    #+#             */
+/*   Created: 2015/11/23 16:20:01 by matirell          #+#    #+#             */
 /*   Updated: 2017/02/11 20:33:11 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-int	null_string(void)
+size_t	ft_strlen(const char *str)
 {
-	char	**res;
+	size_t i;
 
-	res = ft_strsplit(0, '|');
-	if (!res)
-		return (0);
-	else
-		return (-1);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

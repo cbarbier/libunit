@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_null_string.c                                   :+:      :+:    :+:   */
+/*   04_strtrim_space_before_and_after.c                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbarbier <cbarbier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 20:04:53 by cbarbier          #+#    #+#             */
+/*   Created: 2017/02/11 20:00:04 by matirell          #+#    #+#             */
 /*   Updated: 2017/02/11 20:33:11 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-int	null_string(void)
+int	strtrim_space_before_and_after(void)
 {
-	char	**res;
-
-	res = ft_strsplit(0, '|');
-	if (!res)
+	if (!ft_strcmp(ft_strtrim("  		HERE   	"), "HERE"))
 		return (0);
 	else
 		return (-1);
