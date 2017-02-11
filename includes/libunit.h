@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:01:05 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 02:20:15 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 05:27:43 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <signal.h>
+# include <sys/wait.h>
 
-typedef struct		s_unit_test
+typedef struct			s_unit_test
 {
 	char				*name;
+	int					signal;
 	int					ret;
 	int					(**ft)();
 	struct s_unit_test	*next;
-}					t_unit_test;
+}						t_unit_test;
 
 typedef	struct			s_unit
 {
@@ -30,11 +33,14 @@ typedef	struct			s_unit
 	struct s_unit_test	*cur;
 }						t_unit;
 
-void				ft_init(t_unit_test **head, t_unit_test **cur);
-void				load_test(t_unit *tests, char *testname, int (**ft)());
-void				ft_execute_tests(t_unit *tests);
-void				*ft_memset(void *str, int c, size_t n);
-void				*ft_memalloc(size_t size);
-char				*ft_strdup(const char *str);
-size_t				ft_strlen(const char *str);
+void					ft_init(t_unit_test **head, t_unit_test **cur);
+void					load_test(t_unit *tests, char *testname, int (**ft)());
+void					ft_execute_tests(t_unit *tests);
+void					*ft_memset(void *str, int c, size_t n);
+void					ft_putstr(char *str);
+void					ft_putchar(char c);
+void					ft_putendl(char const *str);
+void					*ft_memalloc(size_t size);
+char					*ft_strdup(const char *str);
+size_t					ft_strlen(const char *str);
 #endif

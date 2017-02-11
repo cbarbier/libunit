@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 16:18:31 by matirell          #+#    #+#              #
-#    Updated: 2017/02/11 02:20:56 by matirell         ###   ########.fr        #
+#    Updated: 2017/02/11 02:55:19 by matirell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,5 +51,8 @@ fclean: clean
 	@rm -rf $(NAME)
 	@echo "[LIBUNIT] - CLEANING LIBUNIT.A"
 	@make fclean -C $(MINILIBFT)
+
+test: fclean $(NAME)
+	gcc libunit.a minilibft/minilibft.a main.c -I../includes -o testprog
 
 re: fclean all

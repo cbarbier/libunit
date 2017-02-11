@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 16:18:31 by matirell          #+#    #+#              #
-#    Updated: 2017/02/11 02:18:33 by matirell         ###   ########.fr        #
+#    Updated: 2017/02/11 05:15:07 by matirell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ DIR_C = ./src/
 
 DIR_O = ./objs/
 
-FILE_C = ft_memalloc.c ft_memset.c ft_strdup.c ft_strlen.c
+FILE_C = 	ft_memalloc.c ft_memset.c ft_strdup.c ft_strlen.c \
+			ft_putstr.c ft_putchar.c ft_putendl.c
 
 FILE_O = $(FILE_C:.c=.o)
 
