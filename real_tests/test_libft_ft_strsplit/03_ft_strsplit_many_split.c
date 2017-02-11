@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 08:20:29 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 20:42:43 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 22:11:49 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	ft_strsplit_many_split(void)
 		&& !ft_strcmp(res[2], "ghi")
 		&& !ft_strcmp(res[3], "jkl")
 		&& !ft_strcmp(res[4], "m")
-		&& !ft_strcmp(res[5], "m")
-		&& !ft_strcmp(res[6], "m")
-		&& !ft_strcmp(res[7], "m")
+		&& !ft_strcmp(res[5], "n")
+		&& !ft_strcmp(res[6], "o")
+		&& !ft_strcmp(res[7], "pq")
 		&& !res[8])
 		return (0);
 	else
