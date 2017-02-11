@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_null_string.c                                   :+:      :+:    :+:   */
+/*   04_ft_strsplit_null_string.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbarbier <cbarbier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 20:04:53 by cbarbier          #+#    #+#             */
-/*   Updated: 2017/02/11 20:33:11 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 20:41:01 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-int	null_string(void)
+int	ft_strsplit_null_string(void)
 {
 	char	**res;
 

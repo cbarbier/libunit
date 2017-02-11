@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_string_with_null.c                              :+:      :+:    :+:   */
+/*   04_ft_strlen_string_with_null.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbarbier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cbarbier <cbarbier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 19:20:19 by cbarbier          #+#    #+#             */
-/*   Updated: 2017/02/11 19:21:30 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/11 20:43:44 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-int	string_with_null(void)
+int	ft_strlen_string_with_null(void)
 {
 	int	i;
 	int	j;

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_two_words.c                                     :+:      :+:    :+:   */
+/*   03_ft_strsplit_many_split.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 08:20:29 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 20:04:23 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/11 20:42:43 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-int	two_words(void)
+int	ft_strsplit_many_split(void)
 {
 	char	**res;
 

@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_ft_strsplit_no_split.c                          :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 08:20:29 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 20:52:19 by matirell         ###   ########.fr       */
+/*   Created: 2015/12/11 01:29:08 by matirell          #+#    #+#             */
+/*   Updated: 2017/02/11 21:07:07 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-int	ft_strsplit_no_split(void)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	**res;
+	char	*sub;
+	int		i;
 
-	res = ft_strsplit("abc", ' ');
-	if (!ft_strcmp(res[0], "abc") && !res[1])
-		return (0);
-	else
-		return (-1);
+	i = 0;
+	sub = (char *)malloc(sizeof(char) * (len + 1));
+	if (!sub)
+		return (NULL);
+	while (s[start] && len--)
+	{
+		sub[i] = s[start];
+		i++;
+		start++;
+	}
+	sub[i] = '\0';
+	return (sub);
 }

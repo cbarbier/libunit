@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 18:52:00 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 20:12:52 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 21:15:48 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int		main(int ac, char **av)
 	int i;
 
 	i = 0;
+	ft_putendl("");
+	ft_putendl("\t\t{ ------------------------------- }");
+	ft_putendl("\t\t{ - 42 FRAMEWORK LIBUNIT TESTER - }");
+	ft_putendl("\t\t{ ------------------------------- }");
+	ft_putendl("");
 	while (av[i])
 		ft_tests(av[i++], ac);
 	return (0);
