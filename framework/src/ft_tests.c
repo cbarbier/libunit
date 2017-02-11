@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:55:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 09:20:36 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 09:28:34 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,13 @@ int		ft_execute_tests(t_unit *tests)
 		ft_putstr(tmp->name);
 		ft_putstr(" : \t[");
 		if (!tmp->ret)
-			ft_putstr("OK");
+			ft_putstr("\033[0;32mOK\033[0m");
 		else if (tmp->signal == SIGSEGV)
-			ft_putstr("SEGV");
+			ft_putstr("\033[0;33mSEGV\033[0m");
 		else if (tmp->signal == SIGBUS)
-			ft_putstr("BUSE");
+			ft_putstr("\033[0;36mBUSE\033[0m");
 		else
-			ft_putstr("KO");
+			ft_putstr("\033[0;31mKO\033[0m");
 		ft_putendl("]");
 		tmp = tmp->next;
 	}
