@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 19:54:59 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 21:14:48 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 21:33:56 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	ft_strtrim_launcher(void)
 	pt1 = ft_strtrim_empty;
 	pt2 = ft_strtrim_space_before;
 	pt3 = ft_strtrim_space_after;
-
 	tests = ft_memalloc(sizeof(t_unit));
 	if (tests)
 	{
