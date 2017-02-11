@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:05:55 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 05:30:14 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 07:58:52 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,11 @@ int	main(int ac, char **av)
 	tests = ft_memalloc(sizeof(t_unit));
 	tests->head = NULL;
 	tests->cur = NULL;
-	load_test(tests, "TEST 0 ( SEGV )", &pt0);
-	load_test(tests, "TEST 1 ( BUS )", &pt1);
-	load_test(tests, "TEST 2 ( OK )", &pt2);
-	load_test(tests, "TEST 3 ( NOK )", &pt3);
-	ft_execute_tests(tests);
+	load_test(tests, "We'll test a segfault catching ... ", &pt0);
+	load_test(tests, "We'll test a buserror catching ...", &pt1);
+	load_test(tests, "We'll test a valid test ...", &pt2);
+	load_test(tests, "We'll test an invalid test ...", &pt3);
+	printf("RETURN VALUE OF ROUTINE : %i \n", ft_execute_tests(tests));
+	ft_display_resume(tests, 1);
 	return (0);
 }

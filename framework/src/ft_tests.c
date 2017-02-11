@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:55:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 05:24:00 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 07:56:13 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int		ft_test_process(t_unit_test *test, int (**ft)())
 	return (0);
 }
 
-void	ft_execute_tests(t_unit *tests)
+int		ft_execute_tests(t_unit *tests)
 {
 	t_unit_test	*tmp;
 
@@ -71,4 +71,34 @@ void	ft_execute_tests(t_unit *tests)
 		ft_putendl("]");
 		tmp = tmp->next;
 	}
+	return (ft_display_resume(tests, 0) ? -1 : 0);
+}
+
+int 	ft_display_resume(t_unit *tests, int verbose)
+{
+	int			total;
+	int			ok;
+	t_unit_test	*tmp;
+
+	total = 0;
+	ok = 0;
+	tmp = tests->head;
+	while (tmp && ++total)
+	{
+		ok += (!tmp->ret) ? 1 : 0;
+		tmp = tmp->next;
+	}
+	if(total && verbose)
+	{
+		ft_putnbr(ok);
+		ft_putchar('/');
+		ft_putnbr(total);
+		ft_putendl(" tests passed ...");
+		if (ok == total)
+			ft_putendl("\033[0;32m- All tests are OK - \033[0m");
+		else
+			ft_putendl("\033[0;31m- One ( or more ) tests failed -");
+		ft_putstr("\033[0m");
+	}
+	return (total - ok);
 }
