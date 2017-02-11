@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:55:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 07:56:13 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 08:47:45 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,11 +93,11 @@ int 	ft_display_resume(t_unit *tests, int verbose)
 		ft_putnbr(ok);
 		ft_putchar('/');
 		ft_putnbr(total);
-		ft_putendl(" tests passed ...");
+		ft_putstr(" TESTS PASSED -> ");
 		if (ok == total)
-			ft_putendl("\033[0;32m- All tests are OK - \033[0m");
+			ft_putendl("\033[0;32m- TAKE A REST BIATCH - \033[0m");
 		else
-			ft_putendl("\033[0;31m- One ( or more ) tests failed -");
+			ft_putendl("\033[0;31m- WORK MORE BIATCH -");
 		ft_putstr("\033[0m");
 	}
 	return (total - ok);

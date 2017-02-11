@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:01:05 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 07:56:04 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 08:45:39 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef	struct			s_unit
 {
 	struct s_unit_test	*head;
 	struct s_unit_test	*cur;
+	int					returnval;
 }						t_unit;
 
 void					ft_init(t_unit_test **head, t_unit_test **cur);

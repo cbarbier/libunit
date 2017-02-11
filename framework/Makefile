@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 16:18:31 by matirell          #+#    #+#              #
-#    Updated: 2017/02/11 07:11:20 by matirell         ###   ########.fr        #
+#    Updated: 2017/02/11 09:18:55 by matirell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,8 +71,5 @@ clean:
 fclean: clean
 	@rm -rf $(NAME)
 	@echo "[LIBUNIT] - REMOVING LIBUNIT.A ... \t\t\t\t\033[0;32m✓\033[0m"
-
-test: fclean $(NAME)
-	gcc $(NAME) main.c -I../includes -o testprog
 
 re: fclean all
