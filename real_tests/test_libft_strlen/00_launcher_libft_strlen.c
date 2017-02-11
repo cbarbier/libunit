@@ -6,7 +6,7 @@
 /*   By: cbarbier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 18:55:48 by cbarbier          #+#    #+#             */
-/*   Updated: 2017/02/11 19:08:05 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/11 20:14:44 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int		ft_strlen_launcher(void)
 	int		(*pt3)();
 	t_unit	*tests;
 
-	pt0 = one_char_string;
-	pt1 = tab_and_spaces;
-	pt2 = null_string;
-	pt3 = string_with_null;
+	pt0 = ft_strlen_one_char_string;
+	pt1 = ft_strlen_tab_and_spaces;
+	pt2 = ft_strlen_null_string;
+	pt3 = ft_strlen_string_with_null;
 	tests = ft_memalloc(sizeof(t_unit));
 	if (tests)
 	{
