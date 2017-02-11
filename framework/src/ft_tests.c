@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:55:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 08:47:45 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 09:20:36 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int		ft_execute_tests(t_unit *tests)
 	return (ft_display_resume(tests, 0) ? -1 : 0);
 }
 
-int 	ft_display_resume(t_unit *tests, int verbose)
+int		ft_display_resume(t_unit *tests, int verbose)
 {
 	int			total;
 	int			ok;
@@ -88,7 +88,7 @@ int 	ft_display_resume(t_unit *tests, int verbose)
 		ok += (!tmp->ret) ? 1 : 0;
 		tmp = tmp->next;
 	}
-	if(total && verbose)
+	if (total && verbose)
 	{
 		ft_putnbr(ok);
 		ft_putchar('/');

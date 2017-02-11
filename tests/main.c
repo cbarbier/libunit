@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 08:29:42 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 09:17:45 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/11 09:20:52 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		main(int ac, char **av)
 {
-	if(ac && av[0])
+	if (ac && av[0])
 	{
 		framework_launcher();
 	}
