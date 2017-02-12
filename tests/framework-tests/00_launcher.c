@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 08:18:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 20:28:08 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:33:32 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int		framework_launcher(void)
 	lets_berror);
 	load_test(&tests, " 5/5 [HARD] - Can you catch a TIMEOUT ? ", \
 	lets_timeout);
+	load_test(&tests, " 5/5 [HARD] - Can you catch a ABORT   ? ", \
+	lets_abort);
 	tests.returnval = ft_execute_tests(&tests);
 	ft_display_resume(&tests, 1);
 	return (tests.returnval);
