@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:59:36 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 21:03:54 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/12 21:37:47 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcpy_null(void)
 {
-	const char src[4] = " \0		";
-	char dst[12];
+	const char	src[4] = " \0		";
+	char		dst[12];
 
 	ft_memcpy(dst, src, 11);
 	if (!ft_strcmp(dst, src))

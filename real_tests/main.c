@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 18:52:00 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 21:33:38 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/12 21:38:23 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,5 @@ int			main(int ac, char **av)
 	i = 0;
 	while (i++ < ac - 1)
 		total += ft_tests(av[i], ac);
-
 	return (ft_printout(total));
 }

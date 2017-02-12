@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 08:18:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 20:33:32 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 21:39:36 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int		framework_launcher(void)
 {
 	t_unit	tests;
-
 
 	tests.head = NULL;
 	tests.cur = NULL;
