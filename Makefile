@@ -6,24 +6,40 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/11 05:41:00 by matirell          #+#    #+#              #
-#    Updated: 2017/02/11 21:30:56 by matirell         ###   ########.fr        #
+#    Updated: 2017/02/12 19:23:37 by matthieutirelli  ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIBUNIT = "framework"
+NAME = libunit.a
+LIBUNIT = framework
+TEST_LIBUNIT = tests
+TEST_LIBFT = real_tests
 
 all: $(LIBUNIT)$(NAME)
 
 $(LIBUNIT)$(NAME) :
 	@make -C $(LIBUNIT)
+	@make -C $(TEST_LIBUNIT)
+	@make -C $(TEST_LIBFT)
 
 clean:
 	@make clean -C $(LIBUNIT)
-	@make clean -C tests
-	@make clean -C real_tests
+	@make clean -C $(TEST_LIBUNIT)
+	@make clean -C $(TEST_LIBFT)
+
 fclean: clean
 	@make fclean -C $(LIBUNIT)
-	@make fclean -C tests
-	@make fclean -C real_tests
+	@make fclean -C $(TEST_LIBUNIT)
+	@make fclean -C $(TEST_LIBFT)
+
+testlibunit:
+	@make test -C $(TEST_LIBUNIT)
+
+testlibft:
+	@make test -C $(TEST_LIBFT)
+
+test: testlibft testlibunit
+
+
 
 re: fclean all

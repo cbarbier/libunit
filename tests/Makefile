@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/11 08:49:49 by matirell          #+#    #+#              #
-#    Updated: 2017/02/11 09:18:05 by matirell         ###   ########.fr        #
+#    Updated: 2017/02/12 19:21:00 by matthieutirelli  ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ INCLUDES = -L../includes
 all: $(NAME)
 
 $(NAME) :
-	@echo "[TESTS/FRAMEWORK] - COMPILING THE EXECUTABLE\t\t\033[0;32m✓\033[0m"
+	-@test ! -f $(LIB_FRAMEWORK) && make -C ../framework || true
+	@echo "[$(NAME)] EXECUTABLE HAS BEEN CREATED\t\t\033[0;32m✓\033[0m"
 	@$(COMPILER) $(FLAGS) -c $(SRC_C)
 	@mkdir -p $(OBJ)
 	@mv $(FILE_O) $(OBJ)
@@ -46,11 +47,11 @@ clean:
 	@echo "[TESTS/FRAMEWORK] - CLEANING OBJECTS FILES \t\t\033[0;32m✓\033[0m"
 fclean: clean
 	@rm -rf $(NAME)
-	@echo "[TESTS/FRAMEWORK] - CLEANING EXECUTABLE \t\t\033[0;32m✓\033[0m"
+	@echo "[$(NAME)] REMOVING EXECUTABLE\t\t\t\033[0;32m✓\033[0m"
 
 test: $(NAME)
-	@echo "[TESTS/FRAMEWORK] - STARTING TESTS \t\t\033[0;32m✓\033[0m"
-	-@./myframeworktest
+	@echo "[$(NAME)] - STARTING TESTS \t\t\033[0;32m✓\033[0m"
+	-@./$(NAME) || true
 
 re: fclean all
 
