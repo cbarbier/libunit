@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 19:08:43 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 21:07:17 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/12 21:09:57 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,16 @@ int			ft_strtrim_space_after(void);
 int			ft_strtrim_space_before_and_after(void);
 int			ft_atoi(const char *str);
 int			ft_atoi_launcher(void);
+int			ft_memcpy_launcher(void);
+int			ft_memcpy_easy(void);
+int			ft_memcpy_zero(void);
+int			ft_memcpy_null(void);
+int			ft_memcpy_size(void);
+int			ft_memcpy_small(void);
 size_t		ft_strlen(const char *str);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_strtrim(char const *s);
 int			ft_strtrim_launcher(void);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
+void		*ft_memcpy(void *dest, const void *src, size_t n);
 #endif

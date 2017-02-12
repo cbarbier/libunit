@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_lets_timeout.c                                  :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 08:21:13 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 21:39:26 by matirell         ###   ########.fr       */
+/*   Created: 2015/11/24 09:03:16 by matirell          #+#    #+#             */
+/*   Updated: 2017/02/12 20:54:10 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework_test.h"
+#include "libft_test.h"
 
-int	lets_timeout(void)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	while (1)
-		;
-	return (0);
+	char *tmp_src;
+	char *tmp_dest;
+
+	if (n == 0 || dest == src)
+		return (dest);
+	tmp_dest = (char *)dest;
+	tmp_src = (char *)src;
+	while (--n)
+		*tmp_dest++ = *tmp_src++;
+	*tmp_dest = *tmp_src;
+	return (dest);
 }

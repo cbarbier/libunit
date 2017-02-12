@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/11 08:49:49 by matirell          #+#    #+#              #
-#    Updated: 2017/02/12 22:26:55 by cbarbier         ###   ########.fr        #
+#    Updated: 2017/02/12 22:28:47 by cbarbier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ INCLUDES = -I../includes
 all: $(NAME)
 
 $(NAME) :
-	-@test ! -f $(LIB_FRAMEWORK) && make -C ../framework || true
+	-@test ! -f $(UNITEST_LIB) && make -C ../framework || true
 	@echo "[$(NAME)] EXECUTABLE HAS BEEN CREATED\t\t\033[0;32m✓\033[0m"
 	$(COMPILER) $(FLAGS) $(SRC_C) $(MAIN_TEST) $(UNITEST_LIB) $(INCLUDES) -o $(NAME)
 

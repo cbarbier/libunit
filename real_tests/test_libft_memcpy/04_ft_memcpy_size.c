@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_lets_timeout.c                                  :+:      :+:    :+:   */
+/*   04_ft_memcpy_size.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 08:21:13 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 21:39:26 by matirell         ###   ########.fr       */
+/*   Created: 2017/02/12 20:59:36 by matirell          #+#    #+#             */
+/*   Updated: 2017/02/12 21:37:42 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework_test.h"
+#include "libft_test.h"
 
-int	lets_timeout(void)
+int	ft_memcpy_size(void)
 {
-	while (1)
-		;
-	return (0);
+	const char	src[15] = "HELLO WORLD\0";
+	char		dst[6];
+
+	ft_memcpy(dst, src, 4);
+	if (!ft_strcmp(dst, "HELL"))
+		return (0);
+	else
+		return (-1);
 }

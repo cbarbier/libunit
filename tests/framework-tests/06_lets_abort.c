@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   06_lets_abort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbarbier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cbarbier <cbarbier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:32:18 by cbarbier          #+#    #+#             */
-/*   Updated: 2017/02/12 20:41:10 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 21:40:00 by matirell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	lets_abort(void)
 {
-	char 		*tmp;
+	char	*tmp;
 
 	tmp = 0;
 	abort();
