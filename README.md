@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/cedwick/libunit.svg?branch=master)](https://travis-ci.org/cedwick/libunit)
   ____            _       _     _ _     _   _ _   _ ___ _____ 
  |  _ \ _   _ ___| |__   | |   (_) |__ | | | | \ | |_ _|_   _|
  | |_) | | | / __| '_ \  | |   | | '_ \| | | |  \| || |  | |  
