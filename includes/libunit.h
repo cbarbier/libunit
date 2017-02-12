@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:01:05 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 19:42:23 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:11:30 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct			s_unit_test
 	char				*name;
 	int					signal;
 	int					ret;
-	int					(**ft)();
+	int					(*ft)();
 	struct s_unit_test	*next;
 }						t_unit_test;
 

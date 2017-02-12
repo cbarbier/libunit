@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 16:18:31 by matirell          #+#    #+#              #
-#    Updated: 2017/02/11 09:18:55 by matirell         ###   ########.fr        #
+#    Updated: 2017/02/12 20:03:09 by cbarbier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ DIR_MINILIBFT = minilibft
 
 FLAG = -Wall -Wextra -Werror
 
-FILE_C = 			ft_list.c ft_tests.c
+FILE_C = 			ft_list.c ft_tests.c ft_signal.c
 FILE_MINILIBFT_C = 	ft_memalloc.c ft_memset.c ft_strdup.c ft_strlen.c \
 					ft_putstr.c ft_putchar.c ft_putendl.c ft_putnbr.c \
 

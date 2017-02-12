@@ -6,7 +6,7 @@
 /*   By: cbarbier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 19:38:25 by cbarbier          #+#    #+#             */
-/*   Updated: 2017/02/12 19:42:07 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:09:03 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ int		ft_putsignal(t_unit_test *tmp)
 		else if (tmp->signal == SIGBUS)
 			ft_putstr("\033[0;36mBUSE\033[0m");
 		else if (tmp->signal == SIGALRM)
-			ft_putstr("\033[0;36mTIMEOUT\033[0m");
+			ft_putstr("\033[45mTIMEOUT\033[0m");
 		else
 			ft_putstr("\033[0;31mKO\033[0m");
 		ft_putendl("]");
+		return (0);
 }

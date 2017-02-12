@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   framework_test.h                                   :+:      :+:    :+:   */
+/*   04_lets_timeout.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 08:26:18 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 19:59:38 by cbarbier         ###   ########.fr       */
+/*   Created: 2017/02/11 08:21:13 by matirell          #+#    #+#             */
+/*   Updated: 2017/02/12 20:06:50 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAMEWORK_TEST_H
-# define FRAMEWORK_TEST_H
-# include "../includes/libunit.h"
+#include "../framework_test.h"
 
-int	framework_launcher(void);
-int	basic_test_success(void);
-int	basic_test_error(void);
-int	lets_segv(void);
-int	lets_berror(void);
-int	lets_timeout(void);
-#endif
+int	lets_timeout(void)
+{
+	while (1);
+	return (0);
+}

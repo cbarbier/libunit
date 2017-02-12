@@ -6,13 +6,13 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:55:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 19:43:26 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:11:17 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-void		load_test(t_unit *tests, char *testname, int (**ft)())
+void		load_test(t_unit *tests, char *testname, int (*ft)())
 {
 	ft_init(&tests->head, &tests->cur);
 	if (tests->cur)
@@ -22,7 +22,7 @@ void		load_test(t_unit *tests, char *testname, int (**ft)())
 	}
 }
 
-int			ft_test_process(t_unit_test *test, int (**ft)())
+int			ft_test_process(t_unit_test *test, int (*ft)())
 {
 	pid_t	pid;
 	int		result;
@@ -33,6 +33,7 @@ int			ft_test_process(t_unit_test *test, int (**ft)())
 	{
 		if (pid == 0)
 		{
+			alarm(2);
 			result = (*ft)();
 			exit(result);
 		}
