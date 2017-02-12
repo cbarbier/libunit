@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:55:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 19:42:27 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 19:43:26 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int			ft_execute_tests(t_unit *tests)
 		ft_putchar('\t');
 		ft_putstr(tmp->name);
 		free(tmp->name);
+		ft_putsignal(tmp);
 		tmp = tmp->next;
 	}
 	return (ft_display_resume(tests, 0) ? -1 : 0);
