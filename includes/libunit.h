@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:01:05 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 20:11:30 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:23:14 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef	struct			s_unit
 }						t_unit;
 
 void					ft_init(t_unit_test **head, t_unit_test **cur);
-void					load_test(t_unit *tests, char *testname, int (**ft)());
+void					load_test(t_unit *tests, char *testname, int (*ft)());
 int						ft_execute_tests(t_unit *tests);
 void					*ft_memset(void *str, int c, size_t n);
 void					ft_putstr(char *str);
