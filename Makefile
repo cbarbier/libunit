@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/11 05:41:00 by matirell          #+#    #+#              #
-#    Updated: 2017/02/12 23:00:30 by cbarbier         ###   ########.fr        #
+#    Updated: 2017/02/12 23:13:15 by matirell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ TEST_LIBFT = real_tests
 all: $(LIBUNIT)$(NAME)
 
 $(LIBUNIT)$(NAME) :
-	@norminette
 	@make -C $(LIBUNIT)
 	@make -C $(TEST_LIBUNIT)
 	@make -C $(TEST_LIBFT)
