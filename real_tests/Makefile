@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/11 20:17:28 by matirell          #+#    #+#              #
-#    Updated: 2017/02/11 21:32:07 by matirell         ###   ########.fr        #
+#    Updated: 2017/02/12 19:22:28 by matthieutirelli  ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,9 @@ FLAGS = -W -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME) :
-	@echo "[$(NAME)] EXECUTABLE HAS BEEN CREATED\t\t\033[0;32m✓\033[0m"
-	@$(COMPILER) $(FILES) $(FLAGS) $(TESTS) $(LIBFT_TEST) $(LIB_FRAMEWORK) $(INC) -o $(NAME)
+		-@test ! -f $(LIB_FRAMEWORK) && make -C ../framework || true
+		@echo "[$(NAME)] EXECUTABLE HAS BEEN CREATED\t\t\033[0;32m✓\033[0m"
+		@$(COMPILER) $(FILES) $(FLAGS) $(TESTS) $(LIBFT_TEST) $(LIB_FRAMEWORK) $(INC) -o $(NAME)
 
 clean:
 	@echo "[$(NAME)] NO OBJECT FILES IN THIS PROJECT\t\t\033[0;32m✓\033[0m"
@@ -64,4 +65,5 @@ fclean: clean
 re: fclean all
 
 test: $(NAME)
-	-@./$(NAME)
+	@echo "[$(NAME)] - STARTING TESTS \t\t\033[0;32m✓\033[0m"
+	-@./$(NAME) || true
