@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/11 08:49:49 by matirell          #+#    #+#              #
-#    Updated: 2017/02/12 20:33:56 by cbarbier         ###   ########.fr        #
+#    Updated: 2017/02/12 22:26:55 by cbarbier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = myframeworktest
 
 DIR = framework-tests/
 OBJ = obj/
-LIB = framework-tests.a
+HDR = framework_test.h
 
 FILES = 00_launcher.c 01_basic_test_success.c 02_basic_test_error.c \
 		03_lets_segv.c 04_lets_berror.c 05_lets_timeout.c 06_lets_abort.c
@@ -28,19 +28,14 @@ SRC_O := $(addprefix $(OBJ), $(FILE_O))
 
 UNITEST_LIB = ../framework/libunit.a
 MAIN_TEST = main.c
-INCLUDES = -L../includes
+INCLUDES = -I../includes
 
 all: $(NAME)
 
 $(NAME) :
 	-@test ! -f $(LIB_FRAMEWORK) && make -C ../framework || true
 	@echo "[$(NAME)] EXECUTABLE HAS BEEN CREATED\t\t\033[0;32m✓\033[0m"
-	@$(COMPILER) $(FLAGS) -c $(SRC_C)
-	@mkdir -p $(OBJ)
-	@mv $(FILE_O) $(OBJ)
-	@ar rc $(LIB) $(SRC_O)
-	@$(COMPILER) $(FLAGS) $(MAIN_TEST) $(UNITEST_LIB) $(LIB) $(INCLUDES) -o $(NAME)
-	@rm $(LIB)
+	$(COMPILER) $(FLAGS) $(SRC_C) $(MAIN_TEST) $(UNITEST_LIB) $(INCLUDES) -o $(NAME)
 
 clean:
 	@rm -rf $(OBJ)
