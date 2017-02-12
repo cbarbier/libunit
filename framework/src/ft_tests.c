@@ -6,13 +6,13 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:55:02 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 01:19:28 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 19:42:27 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-void	load_test(t_unit *tests, char *testname, int (**ft)())
+void		load_test(t_unit *tests, char *testname, int (**ft)())
 {
 	ft_init(&tests->head, &tests->cur);
 	if (tests->cur)
@@ -22,7 +22,7 @@ void	load_test(t_unit *tests, char *testname, int (**ft)())
 	}
 }
 
-int		ft_test_process(t_unit_test *test, int (**ft)())
+int			ft_test_process(t_unit_test *test, int (**ft)())
 {
 	pid_t	pid;
 	int		result;
@@ -49,7 +49,7 @@ int		ft_test_process(t_unit_test *test, int (**ft)())
 	return (0);
 }
 
-int		ft_execute_tests(t_unit *tests)
+int			ft_execute_tests(t_unit *tests)
 {
 	t_unit_test	*tmp;
 
@@ -60,16 +60,6 @@ int		ft_execute_tests(t_unit *tests)
 		ft_putchar('\t');
 		ft_putstr(tmp->name);
 		free(tmp->name);
-		ft_putstr("\t: \t[");
-		if (!tmp->ret)
-			ft_putstr("\033[0;32mOK\033[0m");
-		else if (tmp->signal == SIGSEGV)
-			ft_putstr("\033[0;33mSEGV\033[0m");
-		else if (tmp->signal == SIGBUS)
-			ft_putstr("\033[0;36mBUSE\033[0m");
-		else
-			ft_putstr("\033[0;31mKO\033[0m");
-		ft_putendl("]");
 		tmp = tmp->next;
 	}
 	return (ft_display_resume(tests, 0) ? -1 : 0);
@@ -87,7 +77,7 @@ static void	ft_free_testlist(t_unit_test *l)
 	}
 }
 
-int		ft_display_resume(t_unit *tests, int verbose)
+int			ft_display_resume(t_unit *tests, int verbose)
 {
 	int			total;
 	int			ok;

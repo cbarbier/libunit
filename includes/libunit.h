@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:01:05 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/11 08:45:39 by matirell         ###   ########.fr       */
+/*   Updated: 2017/02/12 19:42:23 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,5 @@ char					*ft_strdup(const char *str);
 size_t					ft_strlen(const char *str);
 void					ft_putnbr(int nbr);
 int						ft_display_resume(t_unit *tests, int verbose);
+int						ft_putsignal(t_unit_test *tmp);
 #endif
