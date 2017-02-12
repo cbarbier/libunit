@@ -6,7 +6,7 @@
 #    By: matirell <matirell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/11 08:49:49 by matirell          #+#    #+#              #
-#    Updated: 2017/02/12 20:38:51 by matirell         ###   ########.fr        #
+#    Updated: 2017/02/12 21:35:57 by matirell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJ = obj/
 LIB = framework-tests.a
 
 FILES = 00_launcher.c 01_basic_test_success.c 02_basic_test_error.c \
-		03_lets_segv.c 04_lets_berror.c 05_lets_timeout.c
+		03_lets_segv.c 04_lets_berror.c 05_lets_timeout.c 06_lets_abort.c
 
 COMPILER = clang
 FLAGS = -W -Wall -Wextra -Werror

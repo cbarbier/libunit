@@ -6,7 +6,7 @@
 /*   By: matirell <matirell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 08:26:18 by matirell          #+#    #+#             */
-/*   Updated: 2017/02/12 19:59:38 by cbarbier         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:34:43 by cbarbier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ int	basic_test_error(void);
 int	lets_segv(void);
 int	lets_berror(void);
 int	lets_timeout(void);
+int	lets_abort(void);
 #endif
